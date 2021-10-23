@@ -17,7 +17,9 @@ func bankAccountMain() {
 }
 
 actor BankAccount {
-    var balance: Int = 0
+    private(set) var balance: Int = 0
+
+    @discardableResult
     func deposit(_ amount: Int) -> Int {
         balance += amount
         return balance
